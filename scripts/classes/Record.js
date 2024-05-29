@@ -3,12 +3,14 @@ export class Record {
     type;
     sum;
     title;
+    date;
 
     static #count = 0;
 
-    constructor(title, sum) {
+    constructor(title, sum, date) {
         this.title = title;
         this.sum = sum;
+        this.date = date;
 
         Record.#count++;
         this.id = Record.#count;

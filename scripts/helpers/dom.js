@@ -10,6 +10,7 @@ export const onStart = () => {
     const total = document.querySelector('#total');
     const sumInput = document.querySelector('#sum-input');
     const titleInput = document.querySelector('#title-input');
+    const dateInput = document.querySelector('#date-input');
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -17,7 +18,8 @@ export const onStart = () => {
         const type = recordType.value;
         const sum = parseFloat(type === 'income' ? sumInput.value : -sumInput.value);
         const title = titleInput.value;
-        const record = createRecord(title, sum, type);
+        const date = dateInput.value;
+        const record = createRecord(title, sum, type, date);
         addRecord(record);
 
         const li = document.createElement('li');
