@@ -26,16 +26,19 @@
                     <label for="title-input">שם</label>
                     <input type="text" id="title-input" required>
                 </div>
-                <div class="form-control">
-                    <label for="date-input">תאריך</label>
-                    <input type="date" id="date-input" required>
-                </div>
+            </div>
+
+            <div class="fields-container">
                 <div class="form-control">
                     <label for="type">תיאור</label>
                     <select dir="rtl" name="type" id="type">
                         <option value="expense">הוצאה</option>
                         <option value="income">הכנסה</option>
                     </select>
+                </div>
+                <div class="form-control">
+                    <label for="date-input">תאריך</label>
+                    <input type="date" id="date-input" required>
                 </div>
             </div>
 
@@ -45,20 +48,22 @@
 
         </form>
 
-        <div class="card">
-            <h3 class="text">סה"כ</h3>
+        <div class="card bg-grid total">
+            <div class="title-container">
+                <h3 class="text">סה"כ</h3>
+            </div>
             <p id="total">0</p>
         </div>
 
         <div class="inner-container">
-            <div class="card records">
+            <div class="card records bg-grid">
                 <div class="title-container">
                     <h3 class="text">הכנסות</h3>
                 </div>
                 <ul id="incomes">
                 </ul>
             </div>
-            <div class="card records">
+            <div class="card records bg-grid">
                 <div class="title-container">
                     <h3 class="text">הוצאות</h3>
                 </div>
