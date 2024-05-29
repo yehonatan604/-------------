@@ -99,7 +99,8 @@ select {
   border-radius: 10px 10px 0 0;
 }
 
-input {
+input,
+select {
   border-bottom: 2px solid #82a7b1a1;
 }
 
