@@ -169,7 +169,6 @@ li {
   }
 
   .fields-container {
-    flex-direction: column-reverse;
     gap: 5px;
   }
 
