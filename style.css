@@ -40,6 +40,10 @@
 .fields-container {
   gap: 20px;
 }
+.fields-container > .form-control > input,
+.fields-container > .form-control > select {
+  width: 100%;
+}
 
 .form-control {
   display: flex;
