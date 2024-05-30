@@ -20,7 +20,7 @@ export class Record {
         return `Method getInfo() is not implemented in ${this.constructor.name} class`;
     }
 
-    static removeRecord = (id) => {
-        this.recordsList = this.recordsList.filter(record => record.id !== id);
+    removeRecord = () => {
+        Record.recordsList = Record.recordsList.filter(record => record.id !== this.id);
     }
 }

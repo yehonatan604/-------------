@@ -37,7 +37,7 @@ export const onStart = () => {
         total.textContent = `${Calculator.balance(Record.recordsList)}`;
 
         xBtn.addEventListener('click', () => {
-            Record.removeRecord(record.id);
+            record.removeRecord();
             record.type === 'income' ? incomes.removeChild(li) : expenses.removeChild(li);
             total.textContent = `${Calculator.balance(Record.recordsList)}`;
         });
