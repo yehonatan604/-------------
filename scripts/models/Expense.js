@@ -7,6 +7,6 @@ export class Expense extends Record {
     }
 
     getInfo = () => {
-        return `${this.id} | ${this.title} | ${-this.sum} | ${this.date}`;
+        return `${this.title}  |  ${-this.sum}  |  ${this.date}`;
     }
 }
