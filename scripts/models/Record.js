@@ -6,16 +6,14 @@ export class Record {
     date;
 
     static recordsList = [];
-    static #count = 0;
 
     constructor(title, sum, date) {
         this.title = title;
         this.sum = sum;
         this.date = date;
 
-        Record.#count++;
-        this.id = Record.#count;
         Record.recordsList.push(this);
+        this.id = Record.recordsList.length;
     }
 
     getInfo = () => {
