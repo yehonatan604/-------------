@@ -1,5 +1,5 @@
-import { Calculator } from "../classes/Calculator.js";
-import { Record } from "../classes/Record.js";
+import { Calculator } from "../models/Calculator.js";
+import { Record } from "../models/Record.js";
 import { createRecord } from "./recordFactory.js";
 
 export const onStart = () => {
