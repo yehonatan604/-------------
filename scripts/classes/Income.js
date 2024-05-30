@@ -7,6 +7,6 @@ export class Income extends Record {
     }
 
     getInfo = () => {
-        return `${this.id} | ${this.title} | ${this.sum}₪ | ${this.date}`;
+        return `${this.id} | ${this.title} | ${this.sum} | ${this.date}`;
     }
 }

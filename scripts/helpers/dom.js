@@ -1,5 +1,5 @@
-import { records, removeRecord, addRecord } from "./recordsList.js";
 import { Calculator } from "../classes/Calculator.js";
+import { Record } from "../classes/Record.js";
 import { createRecord } from "./recordFactory.js";
 
 export const onStart = () => {
@@ -20,7 +20,6 @@ export const onStart = () => {
         const title = titleInput.value;
         const date = dateInput.value;
         const record = createRecord(title, sum, type, date);
-        addRecord(record);
 
         const li = document.createElement('li');
 
@@ -35,12 +34,12 @@ export const onStart = () => {
         xBtn.className = 'x-btn';
 
         record.type === 'income' ? incomes.appendChild(li) : expenses.appendChild(li);
-        total.textContent = `${Calculator.balance(records)}₪`;
+        total.textContent = `${Calculator.balance(Record.recordsList)}`;
 
         xBtn.addEventListener('click', () => {
-            removeRecord(record.id);
+            Record.removeRecord(record.id);
             record.type === 'income' ? incomes.removeChild(li) : expenses.removeChild(li);
-            total.textContent = `${Calculator.balance(records)}₪`;
+            total.textContent = `${Calculator.balance(Record.recordsList)}`;
         });
 
         div.appendChild(info);

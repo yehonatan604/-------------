@@ -5,6 +5,7 @@ export class Record {
     title;
     date;
 
+    static recordsList = [];
     static #count = 0;
 
     constructor(title, sum, date) {
@@ -14,9 +15,14 @@ export class Record {
 
         Record.#count++;
         this.id = Record.#count;
+        Record.recordsList.push(this);
     }
 
     getInfo = () => {
         return `Method getInfo() is not implemented in ${this.constructor.name} class`;
+    }
+
+    static removeRecord = (id) => {
+        this.recordsList = this.recordsList.filter(record => record.id !== id);
     }
 }
